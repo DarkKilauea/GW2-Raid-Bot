@@ -6,6 +6,7 @@ import net.dv8tion.jda.core.entities.Emote;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Reactions {
     /**
@@ -32,35 +33,13 @@ public class Reactions {
             "Magblade" //387296198928891905
     };
 
-    static Emote[] reactions = {
-            getEmoji("387295988282556417"), // Dragonhunter
-            getEmoji("387296167958151169"), // Firebrand
-            getEmoji("387296053659172869"), // Herald
-            getEmoji("387296192381321226"), // Renegade
-            getEmoji("387296013947502592"), // Berserker
-            getEmoji("387296212421836800"), // Spellbreaker
-            getEmoji("387296081823662081"), // Scrapper
-            getEmoji("387296176770121738"), // Holosmith
-            getEmoji("387296044716916738"), // Druid
-            getEmoji("387296205488521216"), // Soulbeast
-            getEmoji("387296029533274113"), // Daredevil
-            getEmoji("387296159716081664"), // Deadeye
-            getEmoji("387296219988361218"), // Weaver
-            getEmoji("387296089340117002"), // Tempest
-            getEmoji("387296021710897152"), // Chronomancer
-            getEmoji("387296184114610185"), // Mirage
-            getEmoji("387296061997318146"), // Reaper
-            getEmoji("387296198928891905"), // Scourge
-            getEmoji("387346852867211274") // X_
-    };
-
     /**
-     * Get an emoji from it's emote ID via JDA
-     * @param id The ID of the emoji
+     * Get an emoji from it's emote name via JDA
+     * @param name The name of the emoji
      * @return The emote object representing that emoji
      */
-    private static Emote getEmoji(String id) {
-        return RaidBot.getInstance().getJda().getEmoteById(id);
+    private static Emote getEmoji(String name) {
+        return RaidBot.getInstance().getJda().getEmotesByName(name, true).get(0);
     }
 
     /**
@@ -76,7 +55,10 @@ public class Reactions {
      * @return The emotes
      */
     public static List<Emote> getEmotes() {
-        return new ArrayList<>(Arrays.asList(reactions));
+        return Arrays
+                .stream(specs)
+                .map(Reactions::getEmoji)
+                .collect(Collectors.toList());
     }
 
 
