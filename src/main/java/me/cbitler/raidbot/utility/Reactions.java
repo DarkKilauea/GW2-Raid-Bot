@@ -12,18 +12,18 @@ public class Reactions {
      * List of reactions representing classes
      */
     static String[] specs = {
-            "DK Tank", //387295988282556417
-            "Warden Tank", //387296167958151169
-            "Templar Tank", //387296053659172869
-            "NB Tank", //387296192381321226
-            "Sorc Tank", //387296013947502592
-            "Warden Healer", //387296212421836800
-            "Templar Healer", //387296081823662081
-            "Other Healer", //387296176770121738
+            "DKTank", //387295988282556417
+            "WardenTank", //387296167958151169
+            "TemplarTank", //387296053659172869
+            "NBTank", //387296192381321226
+            "SorcTank", //387296013947502592
+            "WardenHealer", //387296212421836800
+            "TemplarHealer", //387296081823662081
+            "OtherHealer", //387296176770121738
             "StamDK", // 387296044716916738
             "MagDK", //387296205488521216
-            "Stam Warden", //387296029533274113
-            "Mag Warden", //387296159716081664
+            "StamWarden", //387296029533274113
+            "MagWarden", //387296159716081664
             "StamSorc", //387296219988361218
             "MagSorc", //387296089340117002
             "Stamplar", //387296021710897152
