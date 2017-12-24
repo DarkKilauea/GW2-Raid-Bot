@@ -12,24 +12,24 @@ public class Reactions {
      * List of reactions representing classes
      */
     static String[] specs = {
-            "Dragonhunter", //387295988282556417
-            "Firebrand", //387296167958151169
-            "Herald", //387296053659172869
-            "Renegade", //387296192381321226
-            "Berserker", //387296013947502592
-            "Spellbreaker", //387296212421836800
-            "Scrapper", //387296081823662081
-            "Holosmith", //387296176770121738
-            "Druid", // 387296044716916738
-            "Soulbeast", //387296205488521216
-            "Daredevil", //387296029533274113
-            "Deadeye", //387296159716081664
-            "Weaver", //387296219988361218
-            "Tempest", //387296089340117002
-            "Chronomancer", //387296021710897152
-            "Mirage", //387296184114610185
-            "Reaper", //387296061997318146
-            "Scourge" //387296198928891905
+            "DK Tank", //387295988282556417
+            "Warden Tank", //387296167958151169
+            "Templar Tank", //387296053659172869
+            "NB Tank", //387296192381321226
+            "Sorc Tank", //387296013947502592
+            "Warden Healer", //387296212421836800
+            "Templar Healer", //387296081823662081
+            "Other Healer", //387296176770121738
+            "StamDK", // 387296044716916738
+            "MagDK", //387296205488521216
+            "Stam Warden", //387296029533274113
+            "Mag Warden", //387296159716081664
+            "StamSorc", //387296219988361218
+            "MagSorc", //387296089340117002
+            "Stamplar", //387296021710897152
+            "Magplar", //387296184114610185
+            "Stamblade", //387296061997318146
+            "Magblade" //387296198928891905
     };
 
     static Emote[] reactions = {
