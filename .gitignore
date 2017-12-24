@@ -5,3 +5,6 @@ target/*
 token
 dependency-reduced-pom.xml
 discord_bots_token
+src/main/resources/META-INF/MANIFEST\.MF
+
+*.jar
