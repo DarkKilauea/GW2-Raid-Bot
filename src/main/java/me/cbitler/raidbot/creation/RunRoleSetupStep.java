@@ -22,7 +22,7 @@ public class RunRoleSetupStep implements CreationStep {
         RaidBot bot = RaidBot.getInstance();
         PendingRaid raid = bot.getPendingRaids().get(e.getAuthor().getId());
 
-        if(e.getMessage().getRawContent().equalsIgnoreCase("done")) {
+        if(e.getMessage().getRawContent().trim().equalsIgnoreCase("done")) {
             if(raid.getRolesWithNumbers().size() > 0) {
                 return true;
             } else {
@@ -35,8 +35,8 @@ public class RunRoleSetupStep implements CreationStep {
                 e.getChannel().sendMessage("You need to specify the role in the format [amount]:[Role name]").queue();
             } else {
                 try {
-                    int amnt = Integer.parseInt(parts[0]);
-                    String roleName = parts[1];
+                    int amnt = Integer.parseInt(parts[0].trim());
+                    String roleName = parts[1].trim();
                     raid.getRolesWithNumbers().add(new RaidRole(amnt, roleName));
                     e.getChannel().sendMessage("Role added").queue();
                 } catch (Exception ex) {
